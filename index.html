@@ -18,6 +18,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 <style>.founder{grid-template-columns:120px 1fr!important;gap:28px!important}.ph{display:block!important;position:relative;width:120px;height:120px;border:3px solid #a8e13c!important;overflow:hidden;box-shadow:0 0 0 6px #a8e13c22}@media(max-width:760px){.founder{grid-template-columns:1fr!important}.ph{width:110px;height:110px;margin:auto}}</style>
+<style>.svc{cursor:pointer}.svc:focus-visible{outline:2px solid #a8e13c;outline-offset:3px}.svc .hint{display:inline-block;margin-top:12px;color:#a8e13c;font-weight:600;font-size:.9rem}.svc:hover .hint{text-decoration:underline}
+#sm{position:fixed;inset:0;z-index:999;background:rgba(5,10,25,.85);display:none;align-items:center;justify-content:center;padding:16px}#sm.on{display:flex}
+#sm .bx{background:#0d1b3a;border:1px solid #a8e13c55;border-radius:16px;max-width:900px;width:100%;max-height:90vh;overflow:auto;padding:24px;color:#e8eefc;position:relative}
+#sm h3{margin:0 0 16px;padding-right:40px}#sm .x{position:absolute;top:12px;right:12px;background:none;border:1px solid #a8e13c88;color:#a8e13c;border-radius:50%;width:36px;height:36px;font-size:20px;cursor:pointer}
+#sm .gr{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}#sm figure{margin:0;position:relative}#sm figure img{width:100%;border-radius:10px;display:block}#sm figcaption{font-size:.85rem;opacity:.8;margin-top:6px}
+#sm .lk{display:block;border:1px solid #a8e13c55;border-radius:10px;padding:16px;color:#a8e13c;text-decoration:none}#sm .lk:hover{background:#a8e13c14}#sm ul{line-height:1.7}#sm .yb{position:absolute;left:50%;top:45%;transform:translate(-50%,-50%);background:#a8e13c;color:#0d1b3a;border:0;border-radius:50%;width:56px;height:56px;font-size:22px;cursor:pointer}
+#sm iframe{width:100%;aspect-ratio:16/9;border:0;border-radius:10px}#sm .vt iframe{aspect-ratio:9/16;max-height:70vh}
+@media(max-width:600px){#sm .bx{padding:18px}#sm .gr{grid-template-columns:1fr}}</style>
 </head>
 <body>
 <header class="nav" id="top">
@@ -45,12 +53,12 @@
 <section id="services" class="sec">
   <div class="head"><p class="k">01 — Services</p><h2>What we make</h2></div>
   <div class="cards">
-    <article class="card rv"><span class="n">01</span><h3>YouTube thumbnails & graphics</h3><p>Click-worthy thumbnails, channel art and social posts in a consistent brand style.</p></article>
-    <article class="card rv"><span class="n">02</span><h3>Shorts & short-video editing</h3><p>Vertical edits with captions, pacing and sound designed for Shorts, Reels and TikTok.</p></article>
-    <article class="card rv"><span class="n">03</span><h3>Kids learning videos</h3><p>Gentle, colourful Bangla and English videos for little learners: colours, numbers, animals.</p></article>
-    <article class="card rv"><span class="n">04</span><h3>Small websites & apps</h3><p>Fast landing pages, portfolios and simple web apps you can host cheaply.</p></article>
-    <article class="card rv"><span class="n">05</span><h3>Small coding jobs</h3><p>Fixes, scripts, automations and spreadsheet helpers, scoped clearly before we start.</p></article>
-    <article class="card rv"><span class="n">06</span><h3>Book writing & publishing</h3><p>Researched Bangla non-fiction, from outline to print-ready file and ebook.</p></article>
+    <article class="card rv svc" data-s="01" tabindex="0" role="button" aria-haspopup="dialog"><span class="n">01</span><h3>YouTube thumbnails & graphics</h3><p>Click-worthy thumbnails, channel art and social posts in a consistent brand style.</p><span class="hint">See samples →</span></article>
+    <article class="card rv svc" data-s="02" tabindex="0" role="button" aria-haspopup="dialog"><span class="n">02</span><h3>Shorts & short-video editing</h3><p>Vertical edits with captions, pacing and sound designed for Shorts, Reels and TikTok.</p><span class="hint">See samples →</span></article>
+    <article class="card rv svc" data-s="03" tabindex="0" role="button" aria-haspopup="dialog"><span class="n">03</span><h3>Kids learning videos</h3><p>Gentle, colourful Bangla and English videos for little learners: colours, numbers, animals.</p><span class="hint">See samples →</span></article>
+    <article class="card rv svc" data-s="04" tabindex="0" role="button" aria-haspopup="dialog"><span class="n">04</span><h3>Small websites & apps</h3><p>Fast landing pages, portfolios and simple web apps you can host cheaply.</p><span class="hint">See samples →</span></article>
+    <article class="card rv svc" data-s="05" tabindex="0" role="button" aria-haspopup="dialog"><span class="n">05</span><h3>Small coding jobs</h3><p>Fixes, scripts, automations and spreadsheet helpers, scoped clearly before we start.</p><span class="hint">See samples →</span></article>
+    <article class="card rv svc" data-s="06" tabindex="0" role="button" aria-haspopup="dialog"><span class="n">06</span><h3>Book writing & publishing</h3><p>Researched Bangla non-fiction, from outline to print-ready file and ebook.</p><span class="hint">See samples →</span></article>
   </div>
 </section>
 
@@ -122,5 +130,24 @@
 </main>
 <footer><img src="assets/img/emblem.svg" alt="" width="28" height="28"><span>© 2026 Quad A Studio</span><a href="#top">Back to top ↑</a></footer>
 <script src="assets/main.js" defer></script>
+<div id="sm" role="dialog" aria-modal="true" aria-labelledby="smt"><div class="bx"><button class="x" aria-label="Close">×</button><h3 id="smt"></h3><div id="smb"></div></div></div>
+<script>(function(){
+var I=function(src,c){return '<figure><img loading="lazy" src="assets/img/'+src+'" alt="'+c+'"><figcaption>'+c+'</figcaption></figure>'};
+var Y=function(id,poster,c,v){return '<figure class="'+(v?'vt':'')+'" data-yt="'+id+'"><img loading="lazy" src="assets/img/'+poster+'" alt="'+c+'"><button class="yb" aria-label="Play '+c+'">▶</button><figcaption>'+c+' (loads on click, privacy-enhanced)</figcaption></figure>'};
+var L=function(u,t,d){return '<a class="lk" href="'+u+'" target="_blank" rel="noopener"><b>'+t+' ↗</b><br><small>'+d+'</small></a>'};
+var site=L('https://taaa1331.github.io/quadastudio/','Quad A Studio website','This site, built by our studio'),dash=L('https://taaa1331.github.io/Agency/','Studio dashboard','A small web app we built to track our own work');
+var D={'01':['YouTube thumbnails & graphics',I('thumb_tech_v2.jpg','Tech channel thumbnail')+I('thumb_cooking.jpg','Cooking thumbnail')+I('gig_thumbnail_design_v2.jpg','Gig cover: thumbnail design')+I('gig_shorts_editing_v2.jpg','Gig cover: Shorts editing')],
+'02':['Shorts & short-video editing',Y('5VbOlLXj9Jo','short_poster.jpg','Space facts — YouTube Short',1)],
+'03':['Kids learning videos',Y('i6LdWcJiJqA','kids_thumb.jpg','Kids learning video — YouTube')+I('kids_still_5.jpg','Tuntuni — kids video still')+I('kids_still_20.jpg','Tuntuni — kids video still')+I('kids_still_40.jpg','Tuntuni — kids video still')],
+'04':['Small websites & apps',I('site_screenshot.jpg','Quad A Studio website')+I('dashboard.jpg','Studio dashboard web app')+site+dash],
+'05':['Small coding jobs','<div class="lk" style="color:inherit"><b style="color:#a8e13c">Examples of what we automate</b><ul><li>Batch-resizing and compressing images for websites</li><li>Generating video thumbnails and stills with scripts</li><li>Building PDF and e-book files from documents</li><li>Spreadsheet helpers and CSV clean-up</li><li>Small static sites and dashboards hosted for free</li></ul><small>These are tasks from our own studio workflow.</small></div>'+site+dash],
+'06':['Book writing & publishing',I('book-office-ai.jpg','অফিসে এআই — book cover')+I('book-agamite.jpg','আগামীতে বাংলাদেশ — book cover')]};
+var m=document.getElementById('sm'),b=document.getElementById('smb'),last;
+function open(k){last=document.activeElement;document.getElementById('smt').textContent=D[k][0]+' — samples';b.innerHTML='<div class="gr">'+D[k][1]+'</div>';m.classList.add('on');document.body.style.overflow='hidden';m.querySelector('.x').focus()}
+function close(){m.classList.remove('on');b.innerHTML='';document.body.style.overflow='';if(last)last.focus()}
+document.querySelectorAll('.svc').forEach(function(c){c.addEventListener('click',function(){open(c.dataset.s)});c.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(c.dataset.s)}})});
+m.addEventListener('click',function(e){if(e.target===m||e.target.classList.contains('x'))close();var y=e.target.closest('.yb');if(y){var f=y.parentNode;f.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+f.dataset.yt+'?autoplay=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="YouTube video"></iframe>'}});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&m.classList.contains('on'))close()});
+})();</script>
 </body>
 </html>
