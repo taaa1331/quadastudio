@@ -26,6 +26,19 @@
 #sm .lk{display:block;border:1px solid #a8e13c55;border-radius:10px;padding:16px;color:#a8e13c;text-decoration:none}#sm .lk:hover{background:#a8e13c14}#sm ul{line-height:1.7}#sm .yb{position:absolute;left:50%;top:45%;transform:translate(-50%,-50%);background:#a8e13c;color:#0d1b3a;border:0;border-radius:50%;width:56px;height:56px;font-size:22px;cursor:pointer}
 #sm iframe{width:100%;aspect-ratio:16/9;border:0;border-radius:10px}#sm .vt iframe{aspect-ratio:9/16;max-height:70vh}
 @media(max-width:600px){#sm .bx{padding:18px}#sm .gr{grid-template-columns:1fr}}</style>
+<style>.grid-bg,.hero-art,.ring,.marquee{pointer-events:none}
+.wk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.wk{margin:0}.wk.hide{display:none}
+.wk-m{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#001e4f;border:1px solid var(--line)}
+.wk-m img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}.wk:hover .wk-m img{transform:scale(1.04)}
+.wk-m iframe{width:100%;height:100%;border:0;display:block}
+.wk-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:56px;height:56px;border-radius:50%;border:0;background:#a8e13c;color:#001e4f;font-size:20px;cursor:pointer;box-shadow:0 8px 24px #0007}
+.wk-play:hover{transform:translate(-50%,-50%) scale(1.08)}
+.wk figcaption{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:10px;font-size:15px}
+.wk figcaption b{font-weight:500}.wk figcaption span{font-size:12px;color:var(--lime);border:1px solid #a8e13c55;border-radius:999px;padding:2px 10px;white-space:nowrap}
+.wk-more{text-align:center;margin-top:28px}.wk-more[hidden]{display:none}
+@media(max-width:980px){.wk-grid{grid-template-columns:repeat(2,1fr);gap:16px}}
+@media(max-width:600px){.wk-grid{grid-template-columns:1fr}}</style>
 </head>
 <body>
 <header class="nav" id="top">
@@ -66,18 +79,19 @@
   <div class="head"><p class="k">02 — Work</p><h2>Selected work</h2>
     <div class="filters" role="tablist"><button class="on" data-f="all">All</button><button data-f="design">Design</button><button data-f="video">Video</button><button data-f="kids">Kids</button></div>
   </div>
-  <div class="gallery">
-    <figure class="g wide" data-c="design"><img loading="lazy" src="assets/img/thumb_tech_v2.jpg" alt="Tech YouTube thumbnail"><figcaption>Tech channel thumbnail<span>Design</span></figcaption></figure>
-    <figure class="g" data-c="design"><img loading="lazy" src="assets/img/thumb_cooking.jpg" alt="Cooking thumbnail"><figcaption>Cooking thumbnail<span>Design</span></figcaption></figure>
-    <figure class="g" data-c="design"><img loading="lazy" src="assets/img/gig_thumbnail_design_v2.jpg" alt="Thumbnail design gig cover"><figcaption>Gig cover: thumbnail design<span>Design</span></figcaption></figure>
-    <figure class="g" data-c="design video"><img loading="lazy" src="assets/img/gig_shorts_editing_v2.jpg" alt="Shorts editing gig cover"><figcaption>Gig cover: Shorts editing<span>Design</span></figcaption></figure>
-    <figure class="g tall yt" data-c="video" data-yt="5VbOlLXj9Jo" data-short="1"><img loading="lazy" src="assets/img/short_poster.jpg" alt="Space facts Short"><button class="play" aria-label="Play">▶</button><figcaption>Space facts — YouTube Short<span>Video</span></figcaption></figure>
-    <figure class="g wide yt" data-c="video kids" data-yt="i6LdWcJiJqA"><img loading="lazy" src="assets/img/kids_thumb.jpg" alt="Kids learning video thumbnail"><button class="play" aria-label="Play">▶</button><figcaption>Kids learning video — YouTube<span>Video · Kids</span></figcaption></figure>
-    <figure class="g" data-c="kids"><img loading="lazy" src="assets/img/kids_still_5.jpg" alt="Kids video still"><figcaption>Tuntuni — kids video still<span>Kids</span></figcaption></figure>
-    <figure class="g" data-c="kids"><img loading="lazy" src="assets/img/kids_still_20.jpg" alt="Kids video still"><figcaption>Tuntuni — kids video still<span>Kids</span></figcaption></figure>
-    <figure class="g" data-c="kids"><img loading="lazy" src="assets/img/kids_still_40.jpg" alt="Kids video still"><figcaption>Tuntuni — kids video still<span>Kids</span></figcaption></figure>
+  <div class="wk-grid">
+    <figure class="wk" data-c="design"><div class="wk-m"><img loading="lazy" src="assets/img/thumb_tech_v2.jpg" alt="Tech channel thumbnail"></div><figcaption><b>Tech channel thumbnail</b><span>Design</span></figcaption></figure>
+    <figure class="wk" data-c="design"><div class="wk-m"><img loading="lazy" src="assets/img/thumb_cooking.jpg" alt="Cooking thumbnail"></div><figcaption><b>Cooking thumbnail</b><span>Design</span></figcaption></figure>
+    <figure class="wk" data-c="video"><div class="wk-m" data-yt="5VbOlLXj9Jo"><img loading="lazy" src="assets/img/kids_still_40.jpg" alt="Tuntuni animals Short"><button class="wk-play" aria-label="Play Tuntuni animals Short">▶</button></div><figcaption><b>Tuntuni animals — YouTube Short</b><span>Video</span></figcaption></figure>
+    <figure class="wk" data-c="video kids"><div class="wk-m" data-yt="i6LdWcJiJqA"><img loading="lazy" src="assets/img/kids_thumb.jpg" alt="Kids learning video"><button class="wk-play" aria-label="Play Kids learning video">▶</button></div><figcaption><b>Kids learning video</b><span>Kids</span></figcaption></figure>
+    <figure class="wk" data-c="design"><div class="wk-m"><img loading="lazy" src="assets/img/gig_thumbnail_design_v2.jpg" alt="Thumbnail design gig cover"></div><figcaption><b>Thumbnail design gig cover</b><span>Design</span></figcaption></figure>
+    <figure class="wk" data-c="design video"><div class="wk-m"><img loading="lazy" src="assets/img/gig_shorts_editing_v2.jpg" alt="Shorts editing gig cover"></div><figcaption><b>Shorts editing gig cover</b><span>Design</span></figcaption></figure>
+    <figure class="wk" data-c="kids"><div class="wk-m"><img loading="lazy" src="assets/img/kids_still_5.jpg" alt="Tuntuni kids video still"></div><figcaption><b>Tuntuni kids video still</b><span>Kids</span></figcaption></figure>
+    <figure class="wk" data-c="kids"><div class="wk-m"><img loading="lazy" src="assets/img/kids_still_20.jpg" alt="Tuntuni kids video still"></div><figcaption><b>Tuntuni kids video still</b><span>Kids</span></figcaption></figure>
+    <figure class="wk" data-c="kids"><div class="wk-m"><img loading="lazy" src="assets/img/kids_still_40.jpg" alt="Tuntuni kids video still"></div><figcaption><b>Tuntuni kids video still</b><span>Kids</span></figcaption></figure>
   </div>
-  <p class="note">Videos go public on YouTube on 31 Oct and 1 Nov 2026. Players load only when you press play (privacy-enhanced mode).</p>
+  <div class="wk-more"><button class="btn ghost" id="wkMore" type="button">See more</button></div>
+  <p class="note">Videos play only when you press play (privacy-enhanced mode).</p>
 </section>
 
 <section id="books" class="sec">
@@ -137,7 +151,7 @@ var Y=function(id,poster,c,v){return '<figure class="'+(v?'vt':'')+'" data-yt="'
 var L=function(u,t,d){return '<a class="lk" href="'+u+'" target="_blank" rel="noopener"><b>'+t+' ↗</b><br><small>'+d+'</small></a>'};
 var site=L('https://taaa1331.github.io/quadastudio/','Quad A Studio website','This site, built by our studio'),dash=L('https://taaa1331.github.io/Agency/','Studio dashboard','A small web app we built to track our own work');
 var D={'01':['YouTube thumbnails & graphics',I('thumb_tech_v2.jpg','Tech channel thumbnail')+I('thumb_cooking.jpg','Cooking thumbnail')+I('gig_thumbnail_design_v2.jpg','Gig cover: thumbnail design')+I('gig_shorts_editing_v2.jpg','Gig cover: Shorts editing')],
-'02':['Shorts & short-video editing',Y('5VbOlLXj9Jo','short_poster.jpg','Space facts — YouTube Short',1)],
+'02':['Shorts & short-video editing',Y('5VbOlLXj9Jo','kids_still_40.jpg','Tuntuni animals — YouTube Short',1)],
 '03':['Kids learning videos',Y('i6LdWcJiJqA','kids_thumb.jpg','Kids learning video — YouTube')+I('kids_still_5.jpg','Tuntuni — kids video still')+I('kids_still_20.jpg','Tuntuni — kids video still')+I('kids_still_40.jpg','Tuntuni — kids video still')],
 '04':['Small websites & apps',I('site_screenshot.jpg','Quad A Studio website')+I('dashboard.jpg','Studio dashboard web app')+site+dash],
 '05':['Small coding jobs','<div class="lk" style="color:inherit"><b style="color:#a8e13c">Examples of what we automate</b><ul><li>Batch-resizing and compressing images for websites</li><li>Generating video thumbnails and stills with scripts</li><li>Building PDF and e-book files from documents</li><li>Spreadsheet helpers and CSV clean-up</li><li>Small static sites and dashboards hosted for free</li></ul><small>These are tasks from our own studio workflow.</small></div>'+site+dash],
@@ -149,5 +163,10 @@ document.querySelectorAll('.svc').forEach(function(c){c.addEventListener('click'
 m.addEventListener('click',function(e){if(e.target===m||e.target.classList.contains('x'))close();var y=e.target.closest('.yb');if(y){var f=y.parentNode;f.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+f.dataset.yt+'?autoplay=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="YouTube video"></iframe>'}});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&m.classList.contains('on'))close()});
 })();</script>
+<script>(function(){var all=false,f='all',M=6,ws=[].slice.call(document.querySelectorAll('.wk')),mb=document.getElementById('wkMore');
+function r(){var m=ws.filter(function(w){return f==='all'||w.dataset.c.split(' ').indexOf(f)>-1});ws.forEach(function(w){w.classList.add('hide')});m.forEach(function(w,i){if(all||i<M)w.classList.remove('hide')});mb.parentNode.hidden=all||m.length<=M}
+document.querySelectorAll('#work .filters button').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('#work .filters button').forEach(function(x){x.classList.toggle('on',x===b)});f=b.dataset.f;all=false;r()})});
+mb.addEventListener('click',function(){all=true;r()});
+document.querySelectorAll('.wk-play').forEach(function(p){p.addEventListener('click',function(){var d=p.parentNode;d.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+d.dataset.yt+'?autoplay=1&rel=0" title="YouTube video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>'})});r()})();</script>
 </body>
 </html>
